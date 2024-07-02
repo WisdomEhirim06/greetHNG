@@ -11,11 +11,11 @@ app.get('/api/hello', async (req, res) => {
 
     try {
         // Fetch client's location using IP address
-        const ipInfo = await axios.get(`https://ipinfo.io/${clientIp}/json?token=YOUR_IPINFO_TOKEN`);
+        const ipInfo = await axios.get(`https://ipinfo.io/${clientIp}/json?token=5c3b85188c8028`);
         const city = ipInfo.data.city;
 
         // Fetch the current temperature
-        const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=YOUR_OPENWEATHERMAP_API_KEY`);
+        const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=6534dc76151e04da24653f8e55d0056f`);
         const temperature = weatherResponse.data.main.temp;
 
         res.json({
