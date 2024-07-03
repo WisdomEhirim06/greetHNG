@@ -24,7 +24,7 @@ app.get('/api/hello', async (req, res) => {
         res.json({
             client_ip: clientIp,
             location: city,
-            greeting: `Hello, ${visitorName}!, the temperature is ${temperature} degrees Celsius in ${city}`
+            greeting: `Hello, ${visitorName}!, the temperature is ${temperature} degrees Celcius in ${city}`
         });
     } catch (error) {
         res.status(500).json({ error: 'Something went wrong!' });
